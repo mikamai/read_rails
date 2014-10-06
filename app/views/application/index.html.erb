@@ -1,5 +1,6 @@
 <pre>
   <% caller.each do |line| %>
-    <%= link_to line, line.split(':')[0], target: '_blank' %>
+    <% parts = line.split(':') %>
+    <%= link_to line, "#{parts[0]}#n#{parts[1]}", target: '_blank' %>
   <% end %>
 </pre>
