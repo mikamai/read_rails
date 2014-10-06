@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-    render :text => %{<pre>#{caller_to_links}</pre>}
   end
 
   def sourcecode
@@ -15,12 +14,6 @@ class ApplicationController < ActionController::Base
   end
 
   private
-
-  def caller_to_links
-    caller.map do |line|
-      %{<a href="#{line}">#{line}</a>}
-    end.join "\n"
-  end
 
   def source_filename
     basename = params[:path].split(':')[0]
