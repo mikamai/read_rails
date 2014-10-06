@@ -1,5 +1,5 @@
 <pre>
   <% caller.each do |line| %>
-    <%= link_to line, line, target: 'blank' %>
+    <%= link_to line, line.split(':')[0], target: '_blank' %>
   <% end %>
 </pre>

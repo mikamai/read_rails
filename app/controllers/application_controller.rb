@@ -16,8 +16,7 @@ class ApplicationController < ActionController::Base
   private
 
   def source_filename
-    basename = params[:path].split(':')[0]
-    "/#{basename}.rb"
+    "/#{params[:path]}.rb"
   end
 
   def code
