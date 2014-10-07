@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   private
 
   def source_filename
-    "/#{params[:path]}.rb"
+    "/#{params[:path]}.#{params[:format]}"
   end
 
   def code
