@@ -4,7 +4,7 @@ This is a very basic rails 4 application that aims to show the usage of `Kernel#
 
 ### Usage
 
-```bash
+```shell
   bundle install
   rake db:migrate
   bundle exec rails s
